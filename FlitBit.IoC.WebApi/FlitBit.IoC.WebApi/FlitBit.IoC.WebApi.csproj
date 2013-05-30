@@ -111,12 +111,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IoCEnabledWebApiControllerFactory.cs" />
+    <Compile Include="FlitBitHttpControllerActivator.cs" />
     <Compile Include="HttpModules\ContainerPerWebRequestHttpModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Start\FlitBitConfig.cs.pp" />
+    <None Include="Content\App_Start\FlitBitConfig.cs.pp" />
     <None Include="FlitBit.IoC.WebApi.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>

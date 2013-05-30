@@ -26,8 +26,6 @@ In the Web.Config register the following:
 
 
 --------------------------------------------------------------------------------
-1.0.0 Release Notes
+Release Notes
 --------------------------------------------------------------------------------
-Removed all the fluff around the WebApi package, and made the the FlitBit.IoC.WebApi more specific focusing on the specific needs of registering 
-FlitBit.IoC with Web Api
-
+See https://github.com/TylerGarlick/FlitBit.IoC.WebApi/blob/master/RELEASE-NOTES.md

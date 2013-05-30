@@ -9,7 +9,7 @@ namespace FlitBit.IoC.WebApi.App_Start
     {
         public static void PreStart()
         {
-            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator), new IoCEnabledWebApiControllerFactory());
+            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator), new FlitBitHttpControllerActivator());
         }
     }
 }
