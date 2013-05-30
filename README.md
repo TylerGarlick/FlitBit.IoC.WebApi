@@ -12,6 +12,7 @@ Installation for ContainerPerWebRequest
 Register the HttpModule, which enables the ContainerPerWebRequest in FlitBit.IoC.  
 
 In the Web.Config register the following:
+```xml
 <system.web>
   <httpModules>
 		<add name="ContainerPerWebRequestHttpModule" type="FlitBit.IoC.WebApi.HttpModules.ContainerPerWebRequestHttpModule, FlitBit.IoC.WebApi" />
@@ -23,7 +24,7 @@ In the Web.Config register the following:
 		<add name="ContainerPerWebRequestHttpModule" type="FlitBit.IoC.WebApi.HttpModules.ContainerPerWebRequestHttpModule, FlitBit.IoC.WebApi" />
 	</modules>
 </system.webServer>
-
+```
 
 --------------------------------------------------------------------------------
 1.0.0 Release Notes
