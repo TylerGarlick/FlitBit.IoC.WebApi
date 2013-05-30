@@ -32,7 +32,7 @@ using this tokenized nuspec file.
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\release\FlitBit.IoC.WebApi.dll" target="lib\net45"/>
+    <file src="FlitBit.IoC.WebApi.dll" target="lib\net45"/>
     <file src="Content\App_Start\FlitBitConfig.cs.pp" target="Content\App_Start" />
     <file src="readme.txt" />
   </files>
