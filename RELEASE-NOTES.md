@@ -8,4 +8,6 @@ FlitBit.IoC with Web Api
 
 1.0.1
 -------------
-Fixed the namepspacing issue in the App_Start => FlitBitConfig.cs
+* Fixed the namepspacing issue in the App_Start => FlitBitConfig.cs
+* Removed redundant ControllerActivator
+* Fixed FlitBitConfig.cs to remove redudant ControllerActivator
