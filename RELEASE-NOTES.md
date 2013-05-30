@@ -5,3 +5,7 @@ FlitBit.IoC.WebApi
 -------------
 Removed all the fluff around the WebApi package, and made the the FlitBit.IoC.WebApi more specific focusing on the specific needs of registering 
 FlitBit.IoC with Web Api
+
+1.0.1
+-------------
+Fixed the namepspacing issue in the App_Start => FlitBitConfig.cs
