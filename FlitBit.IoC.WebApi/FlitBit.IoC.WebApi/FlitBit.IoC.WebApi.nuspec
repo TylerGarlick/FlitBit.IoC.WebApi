@@ -24,6 +24,7 @@ using this tokenized nuspec file.
     <projectUrl></projectUrl>
     <tags>FlitBit, FlitBit.IoC, Web Api, WebApi</tags>
     <dependencies>
+      <dependency id="Microsoft.AspNet.Mvc"/>
       <dependency id="FlitBit.IoC"/>
       <dependency id="Microsoft.AspNet.WebApi.WebHost" />
       <dependency id="WebActivatorEx" />
