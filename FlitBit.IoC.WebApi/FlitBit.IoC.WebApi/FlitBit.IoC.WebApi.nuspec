@@ -26,6 +26,7 @@ using this tokenized nuspec file.
     <dependencies>
       <dependency id="Microsoft.AspNet.Mvc"/>
       <dependency id="FlitBit.Emit" version="[2.8.5]" />
+      <dependency id="FlitBit.Core" version="[2.11.3]" />
       <dependency id="FlitBit.IoC" version="2.12.1"/>
       <dependency id="Microsoft.AspNet.WebApi.WebHost" />
       <dependency id="Microsoft.Net.Http" />
