@@ -117,8 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlitBitHttpControllerActivator.cs" />
-    <Compile Include="HttpModules\ContainerPerWebRequestHttpModule.cs" />
+    <Compile Include="DefaultDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

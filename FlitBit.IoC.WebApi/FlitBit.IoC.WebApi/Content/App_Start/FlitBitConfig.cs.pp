@@ -11,7 +11,7 @@ namespace $rootnamespace$.App_Start
     {
         public static void PreStart()
         {
-            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator), new FlitBitHttpControllerActivator());
+			GlobalConfiguration.Configuration.DependencyResolver = new DefaultDependencyResolver();
         }
     }
 }
