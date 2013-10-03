@@ -117,7 +117,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultDependencyResolver.cs" />
+    <Compile Include="FlitBitWebApiContainerSharedScope.cs" />
+    <Compile Include="FlitBitWebApiDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

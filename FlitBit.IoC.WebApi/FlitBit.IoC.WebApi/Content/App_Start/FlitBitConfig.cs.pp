@@ -11,7 +11,7 @@ namespace $rootnamespace$.App_Start
     {
         public static void PreStart()
         {
-			GlobalConfiguration.Configuration.DependencyResolver = new DefaultDependencyResolver();
+			GlobalConfiguration.Configuration.DependencyResolver = new FlitBitWebApiDependencyResolver(Container.Current);
         }
     }
 }
