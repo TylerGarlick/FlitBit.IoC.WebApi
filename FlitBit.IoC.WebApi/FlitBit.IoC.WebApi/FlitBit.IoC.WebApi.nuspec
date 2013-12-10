@@ -26,6 +26,7 @@ using this tokenized nuspec file.
     <dependencies>
       <dependency id="Microsoft.AspNet.WebApi" />
       <dependency id="FlitBit.IoC" />
+      <dependency id="FlitBit.IoC.Web.Common"/>
       <dependency id="WebActivatorEx" />
     </dependencies>
   </metadata>

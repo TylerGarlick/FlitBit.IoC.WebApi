@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http.Dependencies;
 using FlitBit.Core;
+using FlitBit.IoC.Web.Common;
 
 namespace FlitBit.IoC.WebApi
 {
@@ -12,7 +13,7 @@ namespace FlitBit.IoC.WebApi
 
         public FlitBitWebApiDependencyResolver()
         {
-            _container = Container.Current;
+            _container = ContainerHelpers.Current;
         }
 
         public virtual IDependencyScope BeginScope()
