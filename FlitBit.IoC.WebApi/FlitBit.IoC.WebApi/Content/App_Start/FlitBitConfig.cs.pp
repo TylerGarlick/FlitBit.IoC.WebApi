@@ -12,7 +12,7 @@ namespace $rootnamespace$.App_Start
     {
         public static void PreStart()
         {
-			GlobalConfiguration.Configuration.DependencyResolver = new FlitBitWebApiDependencyResolver();
+			GlobalConfiguration.Configuration.DependencyResolver = new FlitBitWebApiDependencyResolver(Container.Current);
         }
     }
 }

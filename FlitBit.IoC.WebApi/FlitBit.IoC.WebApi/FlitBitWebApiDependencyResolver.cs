@@ -11,14 +11,14 @@ namespace FlitBit.IoC.WebApi
     {
         IContainer _container;
 
-        public FlitBitWebApiDependencyResolver()
+        public FlitBitWebApiDependencyResolver(IContainer container)
         {
-            _container = ContainerHelpers.Current;
+            _container = container;
         }
 
         public virtual IDependencyScope BeginScope()
         {
-            var childContainer = _container.MakeChildContainer(CreationContextOptions.InstanceTracking);
+            var childContainer = ContainerHelpers.Current.MakeChildContainer(CreationContextOptions.InstanceTracking);
             return new DependencyScope(childContainer);
         }
 
