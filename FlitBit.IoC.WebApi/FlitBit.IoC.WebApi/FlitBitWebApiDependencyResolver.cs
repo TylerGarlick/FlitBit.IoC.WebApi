@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http.Dependencies;
-using FlitBit.Core;
 using FlitBit.IoC.Web.Common;
 
 namespace FlitBit.IoC.WebApi
@@ -17,8 +17,9 @@ namespace FlitBit.IoC.WebApi
 
         public virtual IDependencyScope BeginScope()
         {
-            var childContainer = _container.MakeChildContainer(CreationContextOptions.InstanceTracking);
-            return new DependencyScope(childContainer);
+            var container = ContainerHelpers.Current ?? _container.MakeChildContainer(CreationContextOptions.InstanceTracking);
+            var childContainer = container.MakeChildContainer(CreationContextOptions.InstanceTracking);
+            return new FlitBitSharedDependencyScope(childContainer);
         }
 
         public virtual object GetService(Type serviceType)
@@ -37,46 +38,12 @@ namespace FlitBit.IoC.WebApi
                 return (IEnumerable<object>)_container.NewUntyped(LifespanTracking.Automatic, enumerable);
             }
 
-            return default(IEnumerable<object>);
+            return Enumerable.Empty<object>();
         }
 
         public void Dispose()
         {
 
-        }
-
-        class DependencyScope : IDependencyScope
-        {
-            IContainer _container;
-
-            public DependencyScope(IContainer container)
-            {
-                _container = container;
-            }
-
-            public void Dispose()
-            {
-                Util.Dispose(ref _container);
-            }
-
-            public object GetService(Type serviceType)
-            {
-                if (_container.CanConstruct(serviceType))
-                    return _container.CreateInstance(serviceType);
-
-                return default(Type);
-            }
-
-            public IEnumerable<object> GetServices(Type serviceType)
-            {
-                if (_container.CanConstruct(serviceType))
-                {
-                    var enumerable = typeof(IEnumerable<>).MakeGenericType(serviceType);
-                    return (IEnumerable<object>)_container.NewUntyped(LifespanTracking.Automatic, enumerable);
-                }
-
-                return default(IEnumerable<object>);
-            }
         }
     }
 }

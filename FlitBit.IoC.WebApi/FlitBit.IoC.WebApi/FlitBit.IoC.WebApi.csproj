@@ -51,8 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\FlitBit.IoC.2.13.1\lib\net40\FlitBit.IoC.dll</HintPath>
     </Reference>
-    <Reference Include="FlitBit.IoC.Web.Common">
-      <HintPath>..\packages\FlitBit.IoC.Web.Common.1.0.7\lib\net45\FlitBit.IoC.Web.Common.dll</HintPath>
+    <Reference Include="FlitBit.IoC.Web.Common, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FlitBit.IoC.Web.Common.1.0.11\lib\net45\FlitBit.IoC.Web.Common.dll</HintPath>
     </Reference>
     <Reference Include="FlitBit.Wireup, Version=3.1.0.0, Culture=neutral, PublicKeyToken=38f03d0878531ff3, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -97,6 +98,7 @@
     <Compile Include="ExternalWireup\Dependency.FlitBit.IoC.cs" />
     <Compile Include="ExternalWireup\Dependency.FlitBit.IoC.Web.Common.cs" />
     <Compile Include="ExternalWireup\Dependency.FlitBit.Wireup.cs" />
+    <Compile Include="FlitBitSharedDependencyScope.cs" />
     <Compile Include="FlitBitWebApiDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
