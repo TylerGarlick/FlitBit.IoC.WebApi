@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http.Dependencies;
 using FlitBit.Core;
-using FlitBit.IoC.Web.Common;
 
 namespace FlitBit.IoC.WebApi
 {
@@ -18,7 +16,7 @@ namespace FlitBit.IoC.WebApi
 
         public virtual IDependencyScope BeginScope()
         {
-            var childContainer = ContainerHelpers.Current.MakeChildContainer(CreationContextOptions.InstanceTracking);
+            var childContainer = _container.MakeChildContainer(CreationContextOptions.InstanceTracking);
             return new DependencyScope(childContainer);
         }
 
