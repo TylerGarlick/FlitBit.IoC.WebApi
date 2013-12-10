@@ -38,7 +38,7 @@ namespace FlitBit.IoC.WebApi
                 return (IEnumerable<object>)_container.NewUntyped(LifespanTracking.Automatic, enumerable);
             }
 
-            return Enumerable.Empty<object>();
+            return default(IEnumerable<object>);
         }
 
         public void Dispose()
@@ -62,12 +62,21 @@ namespace FlitBit.IoC.WebApi
 
             public object GetService(Type serviceType)
             {
-                throw new NotImplementedException();
+                if (_container.CanConstruct(serviceType))
+                    return _container.CreateInstance(serviceType);
+
+                return default(Type);
             }
 
             public IEnumerable<object> GetServices(Type serviceType)
             {
-                throw new NotImplementedException();
+                if (_container.CanConstruct(serviceType))
+                {
+                    var enumerable = typeof(IEnumerable<>).MakeGenericType(serviceType);
+                    return (IEnumerable<object>)_container.NewUntyped(LifespanTracking.Automatic, enumerable);
+                }
+
+                return default(IEnumerable<object>);
             }
         }
     }
